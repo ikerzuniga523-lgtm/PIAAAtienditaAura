@@ -1,0 +1,129 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="La Tiendita Creativa: productos artesanales hechos con cariño.">
+  <title>La Tiendita six seven | Hecho con aura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio"><span class="brand-mark">✿</span> La Tiendita <em>Creativa</em></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nuestra esencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><button class="btn btn-outline-earth btn-sm" id="themeToggle" type="button" aria-label="Cambiar tema">☾ Modo noche</button></li>
+          <li class="nav-item"><button class="btn btn-earth btn-sm cart-button" data-bs-toggle="modal" data-bs-target="#cartModal">Bolsa <span id="cartCount" class="cart-count">0</span></button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header id="inicio" class="hero-section">
+      <div class="hero-texture"></div>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow">Mucha Aura</span>
+          <h1>Hecha a mano,<br><em>hecho con aura.</em></h1>
+          <p>Objetos únicos con exceso de aura, creatividad y momentos de aura.</p>
+          <a class="btn btn-earth btn-lg" href="#catalogo">Explorar colección <span aria-hidden="true">↗</span></a>
+          <div class="hero-note"><span>✳</span> Cada pieza tiene algo unico. Ninguna tiene Laura.</div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-photo"><img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=900&q=85" alt="Mesa de trabajo con materiales artesanales"></div>
+          <div class="floating-stamp">CREADO<br>CON AMOR<br><span>♡</span></div>
+        </div>
+      </div>
+      <div class="hero-bottom"><span>ARTESANÍA LOCAL</span><span>·</span><span>DISEÑO ORIGINAL</span><span>·</span><span>HECHO CON EL CORAZÓN</span></div>
+    </header>
+
+    <section class="intro-section" id="nosotros">
+      <div class="container intro-grid">
+        <div><span class="eyebrow">HOLA, QUÉ BUENO TENERTE AQUÍ</span><h2>Un poquito de aura<br><em>para todos los días.</em></h2></div>
+        <p>Somos un emprendimiento estudiantil que cree en el valor de lo hecho a mano. Diseñamos y creamos piezas con paciencia, imaginación y mucho cariño, para que encuentres algo que se sienta verdaderamente tuyo.</p>
+      </div>
+    </section>
+
+    <section id="catalogo" class="catalog-section">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">ENCUENTRA TU FAVORITO</span><h2>Nuestra colección</h2><p>Piezas especiales, listas para encontrar un nuevo hogar.</p></div>
+          <div class="catalog-tools">
+            <input id="searchInput" class="form-control search-box" type="search" placeholder="Buscar producto..." aria-label="Buscar producto">
+            <select id="categoryFilter" class="form-select category-select" aria-label="Filtrar categoría">
+              <option value="todos">Todas las categorías</option>
+              <option value="decoracion">Decoración</option>
+              <option value="papeleria">Papelería</option>
+              <option value="accesorios">Accesorios</option>
+            </select>
+          </div>
+        </div>
+        <div class="category-labels"><span>✿ DECORACIÓN</span><span>✿ PAPELERÍA</span><span>✿ ACCESORIOS</span></div>
+        <div class="row g-4" id="productGrid">
+          <div class="col-12 col-sm-6 col-lg-4 product-col" data-name="vela aromática" data-category="decoracion">
+            <article class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&q=85" alt="Vela aromática artesanal"><span class="product-tag">DECORACIÓN</span></div><div class="product-info"><div><h3>Vela aromática</h3><p>Un aroma suave para tus espacios.</p></div><div class="product-buy"><strong>$120 MXN</strong><button class="add-btn" data-name="Vela aromática" data-price="120">+ Agregar</button></div></div></article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 product-col" data-name="maceta pintada" data-category="decoracion">
+            <article class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=800&q=85" alt="Maceta decorativa con planta"><span class="product-tag">DECORACIÓN</span></div><div class="product-info"><div><h3>Maceta pintada</h3><p>Un toque alegre para tu rincón favorito.</p></div><div class="product-buy"><strong>$95 MXN</strong><button class="add-btn" data-name="Maceta pintada" data-price="95">+ Agregar</button></div></div></article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 product-col" data-name="libreta floral" data-category="papeleria">
+            <article class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=800&q=85" alt="Libreta y artículos de papelería"><span class="product-tag">PAPELERÍA</span></div><div class="product-info"><div><h3>Libreta floral</h3><p>Para guardar ideas, planes y sueños.</p></div><div class="product-buy"><strong>$85 MXN</strong><button class="add-btn" data-name="Libreta floral" data-price="85">+ Agregar</button></div></div></article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 product-col" data-name="tote bag ilustrada" data-category="accesorios">
+            <article class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=800&q=85" alt="Bolsa de tela reutilizable"><span class="product-tag">ACCESORIOS</span></div><div class="product-info"><div><h3>Tote bag ilustrada</h3><p>Tu compañera para llevar lo esencial.</p></div><div class="product-buy"><strong>$150 MXN</strong><button class="add-btn" data-name="Tote bag ilustrada" data-price="150">+ Agregar</button></div></div></article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 product-col" data-name="set de stickers" data-category="papeleria">
+            <article class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=85" alt="Materiales creativos y papelería"><span class="product-tag">PAPELERÍA</span></div><div class="product-info"><div><h3>Set de stickers</h3><p>Pequeños detalles para personalizarlo todo.</p></div><div class="product-buy"><strong>$45 MXN</strong><button class="add-btn" data-name="Set de stickers" data-price="45">+ Agregar</button></div></div></article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 product-col" data-name="llavero tejido" data-category="accesorios">
+            <article class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=85" alt="Accesorios artesanales"><span class="product-tag">ACCESORIOS</span></div><div class="product-info"><div><h3>Llavero tejido</h3><p>Un detalle hecho a mano para llevar contigo.</p></div><div class="product-buy"><strong>$60 MXN</strong><button class="add-btn" data-name="Llavero tejido" data-price="60">+ Agregar</button></div></div></article>
+          </div>
+        </div>
+        <p id="emptyMessage" class="empty-message d-none">No encontramos productos con esa búsqueda. Prueba con otra palabra. ✿</p>
+      </div>
+    </section>
+
+    <section class="values-section">
+      <div class="container values-grid">
+        <div class="value-item"><span>♡</span><h3>Hecho con cariño</h3><p>Cada creación lleva tiempo, dedicación y un toque personal.</p></div>
+        <div class="value-item"><span>✳</span><h3>Piezas únicas</h3><p>Nos encanta que cada producto tenga su propia personalidad.</p></div>
+        <div class="value-item"><span>♧</span><h3>Creatividad local</h3><p>Apoyas ideas jóvenes y un proyecto que sigue creciendo.</p></div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+      <div class="container contact-grid">
+        <div><span class="eyebrow">¿TIENES UNA IDEA?</span><h2>Hablemos de<br><em>algo bonito.</em></h2><p>¿Tienes dudas, quieres hacer un pedido especial o simplemente saludarnos? Escríbenos.</p><button class="btn btn-earth" data-bs-toggle="modal" data-bs-target="#contactModal">Enviar un mensaje ↗</button></div>
+        <div class="contact-card"><div class="contact-flower">✿</div><span>LA TIENDITA CREATIVA</span><h3>Gracias por apoyar<br>lo hecho a mano.</h3><p>Tu apoyo hace crecer este pequeño gran sueño.</p><div class="social-links"><a href="#" aria-label="Instagram ilustrativo">Instagram ↗</a><a href="#" aria-label="Facebook ilustrativo">Facebook ↗</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><a class="navbar-brand" href="#inicio">✿ La Tiendita <em>Creativa</em></a><span>© 2026 · Hecho con cariño.</span><a href="#inicio">Volver al inicio ↑</a></div></footer>
+
+  <button id="backToTop" class="back-top" aria-label="Volver arriba">↑</button>
+  <div class="visit-counter">Visitas a esta página: <strong id="visitCount">1</strong></div>
+
+  <!-- Modal del carrito -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content custom-modal"><div class="modal-header"><h5 class="modal-title">Tu bolsita creativa ♡</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button></div><div class="modal-body"><div id="cartItems"><p class="text-muted">Tu bolsa está esperando algo bonito.</p></div><div class="cart-total">Total: <strong id="cartTotal">$0 MXN</strong></div><p class="small text-muted mt-2">Esta es una compra de demostración; no se realizará ningún cobro.</p></div><div class="modal-footer"><button class="btn btn-outline-earth" data-bs-dismiss="modal">Seguir viendo</button><button class="btn btn-earth" id="checkoutBtn">Confirmar pedido</button></div></div></div></div>
+
+  <!-- Modal de contacto -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content custom-modal"><div class="modal-header"><h5 class="modal-title">Envíanos un mensaje ✿</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button></div><div class="modal-body"><form id="contactForm" novalidate><div class="mb-3"><label class="form-label" for="contactName">Tu nombre</label><input class="form-control" id="contactName" required minlength="2"><div class="invalid-feedback">Escribe tu nombre.</div></div><div class="mb-3"><label class="form-label" for="contactEmail">Correo electrónico</label><input class="form-control" id="contactEmail" type="email" required><div class="invalid-feedback">Escribe un correo válido.</div></div><div class="mb-3"><label class="form-label" for="contactMessage">Mensaje</label><textarea class="form-control" id="contactMessage" rows="4" required minlength="10"></textarea><div class="invalid-feedback">Cuéntanos un poquito más (mínimo 10 caracteres).</div></div><button class="btn btn-earth w-100" type="submit">Enviar mensaje</button><p class="small text-muted mt-2 mb-0">Demostración: el formulario valida los datos, pero no envía información a un servidor.</p></form></div></div></div></div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="addToast" class="toast custom-toast" role="status" aria-live="polite" aria-atomic="true"><div class="toast-body">✿ Producto agregado a tu bolsa.</div></div></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
